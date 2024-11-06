@@ -1,0 +1,40 @@
+@import "../../styles/colors.scss";
+
+.root {
+    background-color: $moray;
+    border: 0;
+    color: $white;
+    text-transform: uppercase;
+
+
+    &.fullsize {
+        width: 100%;
+    }
+
+    &.fixedsize{
+        width: 400px;
+    }
+
+
+    &.large {
+        padding: 30px 0;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 40px;
+    };
+
+    &.medium {
+        padding: 12px 0;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 40px;
+    };
+
+    &.small{
+        padding: 15px 0;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 26px;
+
+    };
+}
