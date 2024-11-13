@@ -1,0 +1,19 @@
+@import "../../styles/colors.scss";
+
+
+
+.root {
+    height: 56px;
+    color: $white;
+    border: 0;
+    outline: 0;
+
+    &.green {
+     background-color: $mint;
+    }
+
+    &.brown {
+    background-color: $brown;
+    }
+
+}

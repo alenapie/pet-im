@@ -1,11 +1,9 @@
-import { Navbar } from "../../components/Navbar";
-import { Button } from "../../shared";
+import { TestComponent } from "@/TestComponent";
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Button size="lg" />
+      <TestComponent />
     </>
   );
 };

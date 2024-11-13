@@ -1,0 +1,66 @@
+@import "shared/styles/colors.scss";
+
+@mixin padding-default-x($vertical-space) {
+    padding: $vertical-space 18px;
+}
+
+@mixin sizes {
+    &.lg {
+        @include padding-default-x(30px);
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 40px;
+    };
+
+    &.md {
+        @include padding-default-x(12px);
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 40px;
+    };
+
+    &.sm{
+        @include padding-default-x(15px);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 26px;
+    };
+
+    &.fixedSize{
+        max-width: 400px;
+    }
+}
+
+.root {
+    &:not(.text) {
+        @include sizes;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    &.contained{
+        border: 0;
+
+        &.primary {
+            background-color: $moray;
+            color: $white;
+        }
+
+        &.secondary {
+            background-color: $white;
+            color: $moray;
+        }
+    }
+
+    &.outlined {
+       background-color: $invisible;
+       border: $lime solid 2px;
+       color: $lime;
+
+    }
+
+    &.text {
+        background-color: $invisible;
+        border: 0;
+    }
+}
