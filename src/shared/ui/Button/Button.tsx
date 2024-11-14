@@ -11,13 +11,13 @@ type CommonProps = {
 type ContainedProps = {
   variant?: "contained";
   color?: "primary" | "secondary";
-  size: "lg" | "md" | "sm";
+  size: "lg" | "sm";
 };
 
 type OutlinedProps = {
   variant: "outlined";
   color?: never;
-  size: "lg" | "md" | "sm";
+  size: "lg" | "md";
 };
 
 type TextProps = {
@@ -29,7 +29,7 @@ type TextProps = {
 type Props = CommonProps & (ContainedProps | OutlinedProps | TextProps);
 
 export const Button: FC<Props> = ({
-  size = "sm",
+  size = "lg",
   variant = "contained",
   color = "primary",
   className,
@@ -39,6 +39,7 @@ export const Button: FC<Props> = ({
   const getVariantClasses = () => {
     if (variant === "contained") {
       return [styles.contained, styles[color], styles[size]];
+      //! todo: check size
     }
 
     if (variant === "text") {
@@ -51,7 +52,7 @@ export const Button: FC<Props> = ({
   return (
     <button
       onClick={onClick}
-      className={clsx(className, styles.root, getVariantClasses())}
+      className={clsx(className, styles.button, getVariantClasses())}
     >
       {children}
     </button>

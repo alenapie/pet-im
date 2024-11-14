@@ -1,45 +1,57 @@
 @import "shared/styles/colors.scss";
 
-@mixin padding-default-x($vertical-space) {
-    padding: $vertical-space 18px;
+$size-lg-screen-lg-height: 100px;
+$size-md-screen-lg-height: 64px;
+$size-sm-screen-lg-height: 56px;
+
+$size-lg-screen-sm-height: 72px;
+
+
+
+//! todo: change to map
+
+@mixin lg-text {
+    font-size: 36px;
+    line-height: 40px;
 }
 
-@mixin sizes {
+@mixin sm-text {
+    font-size: 24px;
+    line-height: 26px;
+}
+
+
+.button {
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // &.fixedSize {
+    //     max-width: 400px;
+    // }
+
     &.lg {
-        @include padding-default-x(30px);
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 40px;
-    };
+        @include lg-text();
+        height: $size-lg-screen-lg-height;
 
-    &.md {
-        @include padding-default-x(12px);
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 40px;
-    };
+        @media (max-width: 375px) {
+            @include sm-text();
+            height: $size-lg-screen-sm-height;
+        }
 
-    &.sm{
-        @include padding-default-x(15px);
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 26px;
-    };
-
-    &.fixedSize{
-        max-width: 400px;
-    }
-}
-
-.root {
-    &:not(.text) {
-        @include sizes;
-        text-transform: uppercase;
-        width: 100%;
     }
 
     &.contained{
         border: 0;
+
+        &.sm {
+            @include sm-text();
+
+            height: $size-sm-screen-lg-height;
+        }
 
         &.primary {
             background-color: $moray;
@@ -53,14 +65,26 @@
     }
 
     &.outlined {
-       background-color: $invisible;
+       background-color: transparent;
        border: $lime solid 2px;
        color: $lime;
 
-    }
 
-    &.text {
-        background-color: $invisible;
-        border: 0;
+       &.md {
+           @include sm-text();
+            height: $size-md-screen-lg-height;
+       }
     }
+}
+
+.text {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    font-weight:normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform:none;
+    width: auto;                  
+    height: auto; 
 }
