@@ -1,16 +1,14 @@
 "use client";
 
-import { Button } from "shared/ui";
-import Image from "next/image";
-import arrow from "icons/opposite-arrows.svg";
+import { IconButton } from "./shared/ui/IconButton";
 
 export const TestComponent = () => {
   return (
     <div style={{ backgroundColor: "#000000" }}>
-      <Button variant="outlined" size="lg" onClick={() => {}}>
-        <Image src={arrow} alt="3424" />
-        <span>klsjdlksj</span>
-      </Button>
+      <IconButton icon="arrows" onClick={() => {}} />
+      {/* <Button variant="outlined" size="lg" onClick={() => {}}>
+        <span>фильтры</span>
+      </Button> */}
     </div>
   );
 };

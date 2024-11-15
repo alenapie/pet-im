@@ -1,14 +1,20 @@
+@use "sass:map";
 @import "shared/styles/colors.scss";
 
-$size-lg-screen-lg-height: 100px;
-$size-md-screen-lg-height: 64px;
-$size-sm-screen-lg-height: 56px;
+$button-sizes: (
+  lg-screen: (
+    lg-size: 100px,
+    md-size: 64px,
+    sm-size: 56px
+  ),
+  sm-screen: (
+    lg-size: 72px
+  )
+);
 
-$size-lg-screen-sm-height: 72px;
-
-
-
-//! todo: change to map
+@function get-button-size($size, $screen) {
+    @return map-get(map-get($button-sizes, $screen), $size);
+}
 
 @mixin lg-text {
     font-size: 36px;
@@ -28,6 +34,7 @@ $size-lg-screen-sm-height: 72px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1px;
 
     // &.fixedSize {
     //     max-width: 400px;
@@ -35,11 +42,11 @@ $size-lg-screen-sm-height: 72px;
 
     &.lg {
         @include lg-text();
-        height: $size-lg-screen-lg-height;
+        height: get-button-size(lg-size,  lg-screen);
 
         @media (max-width: 375px) {
             @include sm-text();
-            height: $size-lg-screen-sm-height;
+            height: get-button-size(lg-size, sm-screen);
         }
 
     }
@@ -49,8 +56,7 @@ $size-lg-screen-sm-height: 72px;
 
         &.sm {
             @include sm-text();
-
-            height: $size-sm-screen-lg-height;
+            height: get-button-size(sm-size, lg-screen);
         }
 
         &.primary {
@@ -72,7 +78,7 @@ $size-lg-screen-sm-height: 72px;
 
        &.md {
            @include sm-text();
-            height: $size-md-screen-lg-height;
+           height: get-button-size(md-size, lg-screen);
        }
     }
 }
