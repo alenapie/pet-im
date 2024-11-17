@@ -60,20 +60,20 @@ $button-sizes: (
         }
 
         &.primary {
-            background-color: $moray;
-            color: $white;
+            background-color: $primary;
+            color: $secondary;
         }
 
         &.secondary {
             background-color: $white;
-            color: $moray;
+            color: $secondary;
         }
     }
 
     &.outlined {
        background-color: transparent;
-       border: $lime solid 2px;
-       color: $lime;
+       border: $accent solid 2px;
+       color: $accent;
 
 
        &.md {
@@ -93,4 +93,5 @@ $button-sizes: (
     text-transform:none;
     width: auto;                  
     height: auto; 
+    color: $text;
 }

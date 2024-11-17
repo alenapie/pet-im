@@ -1,3 +1,29 @@
+@import "shared/styles/colors.scss";
+
+
+.icon {
+    &.primary{
+        path {
+            fill: $primary; //?   className="path" и .path не работает 
+        }
+
+
+}
+
+&.secondary{
+    path {
+        fill: $secondary;
+    }
+    
+}
+
+&.mutedSecondary{
+    path {
+        fill: $mutedSecondary;
+    }
+}
+}
+
 .root{
     background-color: transparent;
     border: 0;
