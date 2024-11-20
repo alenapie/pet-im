@@ -1,7 +1,8 @@
-import styles from "./icon-button.module.scss";
-import { icon } from "icons";
 import { FC, MouseEventHandler } from "react";
+import { icon } from "icons";
 import clsx from "clsx";
+
+import styles from "./icon-button.module.scss";
 
 type Props = {
   icon: keyof typeof icon;
