@@ -11,14 +11,10 @@ export const TestComponent = () => {
       {/* <Button variant="outlined" size="lg" onClick={() => {}}>
         <span>фильтры</span>
       </Button> */}
-      <Input
-        color="inputSpecial"
-        fixedSize="fixedSize"
-        placeholder="E-mail"
-      ></Input>
+      {/* <Input onChange={(e) => setState(e.target.value)} color="inputSpecial" fixedSize="fixedSize" placeholder="E-mail" />
       <div style={{ display: "flex" }}>
-        <StarsRating rating={3.7} maxStars={5} />
-      </div>
+        <StarsRating rating={3.7} max={5} />
+      </div> */}
     </div>
   );
 };

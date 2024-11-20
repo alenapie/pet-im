@@ -1,17 +1,24 @@
 @import "../../styles/colors.scss";
 
 
-.starRating {
-    display: flex;
-    align-items: center;
+.rating {
+  display: flex;
+  position: relative;
+
+    .backgroundStars {
+      display: flex;
+      stroke: green;
+    }
+
+    .frontStars {
+      display: flex;
+      position: absolute;
+      overflow: hidden;
+
+
+      :global(.icon) {
+        fill: green
+      }
+    }
   }
   
-.star {
-  width: 20px;
-  height: 19px;
-  margin-right: 4px;
-
-  &:last-child {
-    margin-right: 0;
-  }
-  }
