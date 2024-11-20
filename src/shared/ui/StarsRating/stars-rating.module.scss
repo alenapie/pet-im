@@ -1,0 +1,17 @@
+@import "../../styles/colors.scss";
+
+
+.starRating {
+    display: flex;
+    align-items: center;
+  }
+  
+.star {
+  width: 20px;
+  height: 19px;
+  margin-right: 4px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+  }
