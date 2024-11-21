@@ -7,7 +7,7 @@
 
     .backgroundStars {
       display: flex;
-      stroke: green;
+      stroke: $primary;
     }
 
     .frontStars {
@@ -15,9 +15,9 @@
       position: absolute;
       overflow: hidden;
 
-
       :global(.icon) {
-        fill: green
+        fill: $primary;
+        
       }
     }
   }

@@ -2,7 +2,7 @@
 
 import { IconButton } from "./shared/ui/IconButton";
 import { Input } from "./shared/ui/Input";
-import { StarsRating } from "./shared/ui/StarsRating";
+import { Rating } from "./shared/ui/Rating";
 
 export const TestComponent = () => {
   return (
@@ -11,9 +11,9 @@ export const TestComponent = () => {
       {/* <Button variant="outlined" size="lg" onClick={() => {}}>
         <span>фильтры</span>
       </Button> */}
-      {/* <Input onChange={(e) => setState(e.target.value)} color="inputSpecial" fixedSize="fixedSize" placeholder="E-mail" />
-      <div style={{ display: "flex" }}>
-        <StarsRating rating={3.7} max={5} />
+      {/* <Input onChange={(e) => setState(e.target.value)} color="inputSpecial" fixedSize="fixedSize" placeholder="E-mail" /> */}
+      {/* <div style={{ display: "flex" }}>
+        <Rating rating={3.7} max={5} height={100} width={100} />
       </div> */}
     </div>
   );
