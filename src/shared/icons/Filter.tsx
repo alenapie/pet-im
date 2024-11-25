@@ -10,7 +10,7 @@ export const Filter: FC<SVGProps<SVGSVGElement>> = ({ className }) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      className="path"
+      className="icon"
       d="M6 13H18V11H6M3 6V8H21V6M10 18H14V16H10V18Z"
       fill="white"
     />
