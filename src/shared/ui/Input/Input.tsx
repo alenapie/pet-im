@@ -6,7 +6,7 @@ type Props = {
   className?: string;
   color?: "primary" | "secondary";
   placeholder?: string;
-  onChange: () => void;
+  onChange: (value: string) => void;
 };
 
 export const Input: FC<Props> = ({
@@ -18,7 +18,7 @@ export const Input: FC<Props> = ({
   return (
     <input
       className={clsx(styles.root, styles[color], className)}
-      onChange={onChange}
+      onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
     />
   );

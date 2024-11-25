@@ -1,6 +1,6 @@
 import { FC, SVGProps } from "react";
 
-export const Basket: FC<SVGProps<SVGSVGElement>> = ({ className }) => (
+export const ShoppingCart: FC<SVGProps<SVGSVGElement>> = ({ className }) => (
   <svg
     className={className}
     width="24"
