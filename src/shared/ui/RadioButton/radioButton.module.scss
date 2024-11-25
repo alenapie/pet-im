@@ -1,0 +1,19 @@
+@import "../../styles/colors.scss";
+
+.root {
+    display: flex;
+    align-items: center;
+  }
+  
+  .circle {
+    margin-right: 8px;
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
