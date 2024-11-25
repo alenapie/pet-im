@@ -1,0 +1,25 @@
+@import "../../styles/colors.scss";
+
+
+.rating {
+  display: flex;
+  position: relative;
+  width: fit-content;
+
+    .backgroundStars {
+      display: flex;
+      stroke: $primary;
+    }
+
+    .frontStars {
+      display: flex;
+      position: absolute;
+      overflow: hidden;
+
+      :global(.icon) {
+        fill: $primary;
+        
+      }
+    }
+  }
+  
