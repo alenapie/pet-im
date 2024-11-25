@@ -2,7 +2,6 @@
 
 import { IconButton } from "./shared/ui/IconButton";
 import { Input } from "./shared/ui/Input";
-import { RadioButton } from "./shared/ui/RadioButton";
 import { Rating } from "./shared/ui/Rating";
 
 export const TestComponent = () => {
@@ -17,10 +16,7 @@ export const TestComponent = () => {
         fixedSize="fixedSize"
         placeholder="E-mail"
       ></Input> */}
-      <RadioButton
-        count={5}
-        colors={["red", "green", "blue", "yellow", "purple"]}
-      />
+      <Rating rating={3.5} max={5} />
     </div>
   );
 };
