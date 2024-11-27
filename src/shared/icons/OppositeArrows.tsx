@@ -1,10 +1,12 @@
 import { FC, SVGProps } from "react";
+import { IconSize } from "./constants";
 
-export const OppositeArrows: FC<SVGProps<SVGSVGElement>> = ({ className }) => (
+type Props = { size?: IconSize };
+
+export const OppositeArrows: FC<Props> = ({ size = IconSize.MD }) => (
   <svg
-    className={className}
-    width="24"
-    height="24"
+    width={size}
+    height={size}
     fill="none"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"

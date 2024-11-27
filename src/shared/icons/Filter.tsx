@@ -1,10 +1,13 @@
 import { FC, SVGProps } from "react";
+import { IconSize } from "./constants";
+import clsx from "clsx";
 
-export const Filter: FC<SVGProps<SVGSVGElement>> = ({ className }) => (
+type Props = { size?: IconSize };
+
+export const Filter: FC<Props> = ({ size = IconSize.MD }) => (
   <svg
-    className={className}
-    width="24"
-    height="24"
+    width={size}
+    height={size}
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

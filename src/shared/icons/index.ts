@@ -5,7 +5,6 @@ import { OppositeArrows } from "./OppositeArrows";
 import { ShoppingCart } from "./ShoppingCart";
 import { Filter } from "./Filter";
 import { Heart } from "./Heart";
-import { Circle } from "./Circle";
 import { Star } from "./Star";
 
 export const icon = {
@@ -13,6 +12,7 @@ export const icon = {
   filter: Filter,
   heart: Heart,
   oppositeArrows: OppositeArrows,
-  circle: Circle,
   star: Star,
 };
+
+export { IconSize } from "./constants";

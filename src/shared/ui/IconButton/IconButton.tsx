@@ -1,5 +1,5 @@
 import { FC, MouseEventHandler } from "react";
-import { icon } from "icons";
+import { icon, IconSize } from "icons";
 import clsx from "clsx";
 
 import styles from "./icon-button.module.scss";
@@ -9,6 +9,7 @@ type Props = {
   onClick: MouseEventHandler<HTMLButtonElement>;
   className?: string;
   color: "primary" | "secondary" | "mutedSecondary";
+  size?: IconSize;
 };
 
 export const IconButton: FC<Props> = ({
@@ -16,18 +17,16 @@ export const IconButton: FC<Props> = ({
   onClick,
   className,
   color = "primary",
+  size = IconSize.MD,
 }) => {
   const Icon = icon[name];
 
   return (
-    <button onClick={onClick} className={clsx(styles.root, className)}>
-      <Icon
-        className={clsx(styles.icon, {
-          [styles.primary]: color === "primary",
-          [styles.secondary]: color === "secondary",
-          [styles.mutedSecondary]: color === "mutedSecondary",
-        })}
-      />
+    <button
+      onClick={onClick}
+      className={clsx(styles.root, className, styles[color])}
+    >
+      <Icon size={size} />
     </button>
   );
 };

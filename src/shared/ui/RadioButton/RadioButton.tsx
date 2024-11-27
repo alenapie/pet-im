@@ -1,22 +1,35 @@
 import { FC } from "react";
 import styles from "./radioButton.module.scss";
-import { Circle } from "@/shared/icons/Circle";
+import { Circle } from "./Circle";
 
 type Props = {
-  count: number;
-  colors: string[];
+  values: string[];
+  size?: number;
+  colored?: boolean;
 };
 
-export const RadioButton: FC<Props> = ({ count, colors }) => {
-  const circles = Array.from({ length: count }, (_, index) => {
-    const fillColor = colors[index] || "#fff"; // Цвет заливки или белый по умолчанию
-
+export const RadioButton: FC<Props> = ({ colored, values, size = 24 }) => {
+  if (colored) {
     return (
-      <div key={index} className={styles.circle}>
-        <Circle fill={fillColor} stroke="#D9D9D9" strokeWidth="2" />
+      <div className={styles.colored}>
+        {values.map((color) => (
+          <Circle
+            key={color}
+            color={color}
+            size={size}
+            className={styles.colored}
+          />
+        ))}
       </div>
     );
-  });
-
-  return <div className={styles.root}>{circles}</div>;
+  }
+  return (
+    <div className={styles.text}>
+      {values.map((value) => (
+        <div key={value} className={styles.radioBtnText}>
+          {value}{" "}
+        </div>
+      ))}
+    </div>
+  );
 };

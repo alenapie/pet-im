@@ -1,19 +1,28 @@
 @import "../../styles/colors.scss";
 
-.root {
+.radioBtn {
+  
+  }
+
+.colored {
+  display: flex;
+  flex-direction: row;
+  gap: 16;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  color: $text;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  .radioBtnText {
+    border: 1px solid $border;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 88px;
+    height: 72px;
   }
-  
-  .circle {
-    margin-right: 8px;
-  
-    &:last-child {
-      margin-right: 0;
-    }
-  
-    svg {
-      width: 24px;
-      height: 24px;
-    }
-  }
+}
