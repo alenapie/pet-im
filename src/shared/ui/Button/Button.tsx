@@ -39,7 +39,6 @@ export const Button: FC<Props> = ({
   const getVariantClasses = () => {
     if (variant === "contained") {
       return [styles.contained, styles[color], styles[size]];
-      //! todo: check size
     }
 
     if (variant === "text") {

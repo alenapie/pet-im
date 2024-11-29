@@ -1,0 +1,26 @@
+@import "shared/styles/colors.scss";
+
+
+.root{
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+
+        &.primary {
+            :global(.icon) {
+                fill: $primary;
+            }
+        }   
+    
+        &.secondary {
+            :global(.icon) {
+                fill: $secondary;
+            }
+        }
+    
+        &.mutedSecondary {
+            :global(.icon) {
+                fill: $mutedSecondary;
+            }
+        }
+}
