@@ -9,10 +9,12 @@ type Props = {
   size?: IconSize;
 };
 
+const Icon = icon.star;
+
 const getStars = (max: number, size: IconSize) =>
   Array.from({ length: max }, (_, index) => (
     <div key={index}>
-      <icon.star size={size} />
+      <Icon size={size} />
     </div>
   ));
 

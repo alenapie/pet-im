@@ -13,12 +13,7 @@ export const RadioButton: FC<Props> = ({ colored, values, size = 24 }) => {
     return (
       <div className={styles.colored}>
         {values.map((color) => (
-          <Circle
-            key={color}
-            color={color}
-            size={size}
-            className={styles.colored}
-          />
+          <Circle key={color} color={color} size={size} />
         ))}
       </div>
     );
@@ -27,7 +22,7 @@ export const RadioButton: FC<Props> = ({ colored, values, size = 24 }) => {
     <div className={styles.text}>
       {values.map((value) => (
         <div key={value} className={styles.radioBtnText}>
-          {value}{" "}
+          {value}
         </div>
       ))}
     </div>

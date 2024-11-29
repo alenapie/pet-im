@@ -1,6 +1,5 @@
-import { FC, SVGProps } from "react";
+import { FC } from "react";
 import { IconSize } from "./constants";
-import clsx from "clsx";
 
 type Props = { size?: IconSize };
 

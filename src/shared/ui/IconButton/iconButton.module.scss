@@ -13,10 +13,14 @@
         }   
     
         &.secondary {
-            fill: $secondary;
+            :global(.icon) {
+                fill: $secondary;
+            }
         }
     
         &.mutedSecondary {
-            fill: $mutedSecondary;
+            :global(.icon) {
+                fill: $mutedSecondary;
+            }
         }
 }

@@ -2,7 +2,7 @@ import { FC, MouseEventHandler } from "react";
 import { icon, IconSize } from "icons";
 import clsx from "clsx";
 
-import styles from "./icon-button.module.scss";
+import styles from "./iconButton.module.scss";
 
 type Props = {
   icon: keyof typeof icon;

@@ -23,6 +23,7 @@ export const TestComponent = () => {
         values={["#1C7161", "#CBEC00", "#498D81", "#DADADA", "#000000"]}
       />
       <IconButton color="primary" icon="filter" onClick={() => {}} />
+      <IconButton color="secondary" icon="filter" onClick={() => {}} />
 
       <Button variant="outlined" size="md" onClick={() => {}}>
         <span>фильтры</span>
