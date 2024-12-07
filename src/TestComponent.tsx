@@ -27,6 +27,12 @@ export const TestComponent = () => {
         onChange={(value) => setState(value)}
         active={state}
       />
+      {/* <Input
+        color="inputSpecial"
+        fixedSize="fixedSize"
+        placeholder="E-mail"
+      ></Input> */}
+      <Rating rating={3.5} max={5} />
     </div>
   );
 };
