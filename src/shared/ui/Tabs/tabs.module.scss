@@ -1,0 +1,42 @@
+@import "shared/styles/colors.scss";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: $mutedSecondary solid 2px;
+    width: fit-content;
+    
+
+    .tabs {
+        font-size: 36px;
+        line-height: 39px;
+        margin: 44px 0px 0 0px;
+        display: flex;
+        gap: 40px;
+        justify-content: center; 
+        font-weight: 400;
+
+        @media (max-width: 375px) {
+            font-size: 18px;
+            line-height: 19px;
+            margin: 24px 0px 0px 0px;
+        }
+    }
+
+    .tab {
+        background-color: transparent;
+        border: 0;
+        padding-bottom: 14px;
+        text-transform: uppercase;
+        
+    }
+
+    .active {
+        box-shadow: 0  2px 0 0 $primary;
+        font-weight: 700;
+       }
+       
+    
+
+}
